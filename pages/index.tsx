@@ -11,11 +11,16 @@ import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 import { editionDropAddress } from "../const";
 
+import { useEffect, useState } from "react";
+
 const Home: NextPage = () => {
   const address = useAddress();
   const { contract } = useContract(editionDropAddress);
   const { data, isLoading } = useOwnedNFTs(contract, address);
   const { mutateAsync: claim, isLoading: isClaiming } = useClaimNFT(contract);
+
+  const [quantity, setQuantity] = useState(1);
+
   return (
     <main className={styles.main}>
       <div className={styles.container}>
@@ -46,19 +51,26 @@ const Home: NextPage = () => {
             />
 
             {address ? (
-              <div className={styles.nft}>
-                <Web3Button
-                  contractAddress={editionDropAddress}
-                  action={() =>
-                    claim({
-                      tokenId: 1,
-                      quantity: 1,
-                    })
-                  }
-                >
-                  Claim Edition NFT
-                </Web3Button>
-              </div>
+
+  
+                <div className={styles.nft}>
+
+                  <Web3Button
+                    contractAddress={editionDropAddress}
+                    action={() =>
+                      claim({
+                        tokenId: 2,
+                        quantity: 1,
+                      })
+                    }
+                  >
+                    Claim Edition NFT
+                  </Web3Button>
+
+
+                </div>
+
+         
             ) : (
               <p>Please log in with your Metamask Wallet</p>
             )}
