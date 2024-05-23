@@ -59,7 +59,7 @@ const Home: NextPage = () => {
                     contractAddress={editionDropAddress}
                     action={() =>
                       claim({
-                        tokenId: 2,
+                        tokenId: 0,
                         quantity: 1,
                       })
                     }
