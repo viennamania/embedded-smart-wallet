@@ -1,3 +1,3 @@
-export const activeChain = "polygon";
+export const activeChain = "arbitrum";
 export const factoryAddress = "0x785D58F07C3cBFCaf340833E5D028FA5feF7225c";
-export const editionDropAddress = "0xC7950cE50c523BF6Ce9cF185046c2478073E6E21";
+export const editionDropAddress = "0x35b3D04f6874a6d489Cb9754bf10C802EE46f68b";
