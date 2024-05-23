@@ -3,6 +3,8 @@ import {
   ThirdwebProvider,
   smartWallet,
   embeddedWallet,
+  metamaskWallet,
+
 } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import { activeChain, factoryAddress } from "../const";
@@ -12,12 +14,19 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThirdwebProvider
       clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
       activeChain={activeChain}
-      supportedWallets={[
-        smartWallet(embeddedWallet(), {
-          factoryAddress: factoryAddress,
-          gasless: true,
-        }),
-      ]}
+      supportedWallets={
+        [
+          metamaskWallet({
+            recommended: true,
+          }),
+          smartWallet(embeddedWallet(), {
+            factoryAddress: factoryAddress,
+            gasless: true,
+          }),
+
+          
+        ]
+      }
     >
       <Component {...pageProps} />
     </ThirdwebProvider>

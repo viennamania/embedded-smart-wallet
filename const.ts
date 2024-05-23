@@ -1,3 +1,3 @@
-export const activeChain = "mumbai";
-export const factoryAddress = "0xA4a0b37823a19541D0d2e049cC935E6398b5AB9F";
-export const editionDropAddress = "0x3F01B89cef5257CCD0f37F631a40365Fb0F1886a";
+export const activeChain = "polygon";
+export const factoryAddress = "0x785D58F07C3cBFCaf340833E5D028FA5feF7225c";
+export const editionDropAddress = "0xC7950cE50c523BF6Ce9cF185046c2478073E6E21";
