@@ -20,7 +20,9 @@ const Home: NextPage = () => {
     <main className={styles.main}>
       <div className={styles.container}>
         <div className={styles.header}>
+          
           <h1 className={styles.title}>
+            {/*
             Gasless Transactions with <br />
             <span className={styles.gradientText0}>
               <a
@@ -31,6 +33,8 @@ const Home: NextPage = () => {
                 Smart & Embedded Wallets.
               </a>
             </span>
+            */}
+            Edition Drop NFTs
           </h1>
 
           <div className={styles.connect}>
@@ -47,7 +51,7 @@ const Home: NextPage = () => {
                   contractAddress={editionDropAddress}
                   action={() =>
                     claim({
-                      tokenId: 0,
+                      tokenId: 1,
                       quantity: 1,
                     })
                   }
@@ -56,7 +60,7 @@ const Home: NextPage = () => {
                 </Web3Button>
               </div>
             ) : (
-              <p>Please log in with your Google account or email</p>
+              <p>Please log in with your Metamask Wallet</p>
             )}
             {address && isLoading ? <p>Loading Owned NFTs...</p> : null}
             {address && !isLoading && data && data.length === 0 ? (

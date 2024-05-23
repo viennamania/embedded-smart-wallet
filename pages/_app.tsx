@@ -16,13 +16,16 @@ function MyApp({ Component, pageProps }: AppProps) {
       activeChain={activeChain}
       supportedWallets={
         [
+
           metamaskWallet({
             recommended: true,
           }),
+          /*
           smartWallet(embeddedWallet(), {
             factoryAddress: factoryAddress,
             gasless: true,
           }),
+          */
 
           
         ]
