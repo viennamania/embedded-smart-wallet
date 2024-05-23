@@ -66,7 +66,7 @@ const Home: NextPage = () => {
             {address && !isLoading && data && data.length === 0 ? (
               <p>
                 {isClaiming
-                  ? "Deploying your account and claiming..."
+                  ? "Claiming..."
                   : "No NFTs, claim one now!"}
               </p>
             ) : null}
