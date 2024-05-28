@@ -39,7 +39,7 @@ const Home: NextPage = () => {
               </a>
             </span>
             */}
-            Edition Drop NFTs
+            GPGPU Node NFTs
           </h1>
 
           <div className={styles.connect}>
