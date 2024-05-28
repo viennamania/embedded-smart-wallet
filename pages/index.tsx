@@ -7,13 +7,17 @@ import {
   ThirdwebNftMedia,
   useClaimNFT,
 } from "@thirdweb-dev/react";
+
 import styles from "../styles/Home.module.css";
+
 import { NextPage } from "next";
+
 import { editionDropAddress } from "../const";
 
 import { useEffect, useState } from "react";
 
 const Home: NextPage = () => {
+  
   const address = useAddress();
   const { contract } = useContract(editionDropAddress);
   const { data, isLoading } = useOwnedNFTs(contract, address);
