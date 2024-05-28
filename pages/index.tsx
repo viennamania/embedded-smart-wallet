@@ -74,6 +74,7 @@ const Home: NextPage = () => {
             ) : (
               <p>Please log in with your Metamask Wallet</p>
             )}
+            
             {address && isLoading ? <p>Loading Owned NFTs...</p> : null}
             {address && !isLoading && data && data.length === 0 ? (
               <p>
@@ -82,6 +83,7 @@ const Home: NextPage = () => {
                   : "No NFTs, claim one now!"}
               </p>
             ) : null}
+
             {data &&
               data?.map((nft) => (
                 <div className={styles.container} key={nft.metadata.id}>
@@ -90,7 +92,10 @@ const Home: NextPage = () => {
                     You own {nft.quantityOwned} {nft.metadata.name}
                   </p>
                 </div>
-              ))}
+              ))
+            }
+
+
           </div>
         </div>
       </div>
